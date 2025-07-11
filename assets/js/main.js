@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // TODO: Coloque aqui todo o código Matter.js
+});
+
+
 tsParticles.load("tsparticles", {
       fullScreen: { enable: false },
       background: { color: "#000" },

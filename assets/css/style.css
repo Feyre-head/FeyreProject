@@ -1,53 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "M PLUS 1 Code", monospace;
+  color: white;
+  height: 100%;
+  overflow: hidden;
 }
 
 #tsparticles {
-  position: absolute;
+  overflow: hidden; /*O conteúdo que ultrapassa fica oculto (cortado)*/
+  position: fixed; /* mantém o fundo fixo e cobre a tela toda */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
-  
 }
 
-.header{
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    position:sticky;
-    background: #949494;
-    z-index: 1;
-    
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
+.header {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: 0; /* fixa no topo */
+
+  z-index: 1;
+
+  justify-content: center;
+  align-self: flex-start;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
 }
 
-
-.header button{
-    border: none;
-    background-color: transparent;
-    padding: 2px;  
-    font-size: 10px;
-    transition: transform 0.3s ease;
+.header button {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: white;
 }
 
 .header button:hover {
   transform: scale(1.1); /* aumenta 10% */
+}
 
+.header button:first-child:hover {
+  color: rgb(0, 180, 0);
 }
-.header button:first-child:hover{
-    color: green;
+
+.header button:nth-child(2):hover {
+  color: rgb(108, 108, 255);
 }
-.header button:nth-child(2):hover{
-    color: rgb(0, 25, 136);
-}
-      
-    
 
 [data-i18n] {
   transition: opacity 0.3s ease;
@@ -57,4 +67,64 @@
 }
 .fade-in {
   opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100vh;
+}
+
+.container > p {
+  padding: 10px;
+  font-size: 8px;
+}
+
+.container img {
+  border: 1px solid white;
+  border-radius: 100%;
+
+  object-fit: cover;        /*Corta sem distorcer*/
+  object-position: center; /*Centraliza o corte*/
+
+  margin-bottom: 5px;
+}
+
+.main {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* #titulo { */
+    /* position: absolute;
+    color: white;
+    user-select: none;
+    pointer-events:all;
+    font-family: 'M PLUS 1 Code', monospace;
+} */
+
+.social {
+  margin-top: 20px;
+}
+
+.footer {
+  height: 20px;
+  width: 100%;
+
+  text-align: center; /*Alinha o texto no centro*/
+
+  position: fixed; /*Posição Fixa*/
+  bottom: 0; /*Colado em baixo*/
+  left: 0; /*e na esquerda*/
+  margin-bottom: 10px;
+
+  z-index: 1;
+
+  font-style: italic;
+  font-size: 10px;
+  color: white;
 }
