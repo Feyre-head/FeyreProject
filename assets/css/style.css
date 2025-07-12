@@ -6,7 +6,7 @@
 
 html,
 body {
-  font-family: "M PLUS 1 Code", monospace;
+  font-family: 'M PLUS 1 Code', monospace;
   color: white;
   height: 100%;
   overflow: hidden;
@@ -80,15 +80,15 @@ body {
 }
 
 .container > p {
-  padding: 10px;
-  font-size: 8px;
+  padding: 5px;
+  font-size: 10px;
 }
 
 .container img {
   border: 1px solid white;
   border-radius: 100%;
 
-  object-fit: cover;        /*Corta sem distorcer*/
+  object-fit: cover; /*Corta sem distorcer*/
   object-position: center; /*Centraliza o corte*/
 
   margin-bottom: 5px;
@@ -100,7 +100,7 @@ body {
 }
 
 /* #titulo { */
-    /* position: absolute;
+/* position: absolute;
     color: white;
     user-select: none;
     pointer-events:all;
@@ -109,6 +109,10 @@ body {
 
 .social {
   margin-top: 20px;
+}
+
+.language {
+  margin-top: 50px;
 }
 
 .footer {

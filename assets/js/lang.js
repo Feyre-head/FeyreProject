@@ -3,10 +3,10 @@
 // Objeto com as traduções para cada idioma disponível
 const translations = {
   pt: {
-    mensagem: ['Desenvolvedora FullStack', 'Estudante de ADS'], // Texto em português
+    mensagem: ['Desenvolvedora FullStack', 'Estudante de ADS', 'Aprendendo Java'], // Texto em português
   },
   en: {
-    mensagem: ['Fullstack Developer', 'Software Development student'], // Texto em inglês
+    mensagem: ['Fullstack Developer', 'Software Development student', 'Learning Java'], // Texto em inglês
   }
 };
 
@@ -28,7 +28,7 @@ function setLanguage(lang) {
     const key = el.getAttribute("data-i18n");
 
     // Evita modificar o elemento com data-i18n="mensagem", pois o conteúdo será controlado via Typed.js
-    if(key === 'mensagem') return;
+    if (key === 'mensagem') return;
 
     // Verifica se existe tradução para essa chave no idioma selecionado
     if (translations[lang][key]) {
