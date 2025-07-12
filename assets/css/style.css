@@ -91,7 +91,13 @@ body {
   object-fit: cover; /*Corta sem distorcer*/
   object-position: center; /*Centraliza o corte*/
 
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+
+  transition: transform 0.4s ease;
+}
+
+.container img:hover {
+  transform: scale(1.09); /* aumenta 10% */
 }
 
 .main {
@@ -112,7 +118,19 @@ body {
 }
 
 .language {
-  margin-top: 50px;
+  display: flex;
+
+  height: 100px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.language i {
+  transition: transform 0.2s ease;
+}
+.language i:hover {
+  transform: scale(1.9); /* aumenta 10% */
 }
 
 .footer {
